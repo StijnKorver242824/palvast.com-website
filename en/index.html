@@ -21,4 +21,134 @@
   <meta property="og:image" content="https://palvast.com/og-image.png">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Palvast | Pallet Pooling Management">
+  <meta name="twitter:description" content="Palvast handles your pooled pallet administration: declarations, invoice checks and inventory validation, backed by its own platform and expertise.">
+  <meta name="twitter:image" content="https://palvast.com/og-image.png">
+
+  <link rel="stylesheet" href="/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Palvast",
+    "url": "https://palvast.com/en/",
+    "logo": "https://palvast.com/favicon.svg",
+    "inLanguage": "en"
+  }
+  </script>
 </head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- WIREFRAME: header (B&M: logo, nav, Contact button) -->
+  <header>
+    <p class="wordmark"><a href="/en/">Palvast</a></p>
+    <nav aria-label="Main menu">
+      <a href="#recognise">Sound familiar?</a>
+      <a href="#rhythm">How it works</a>
+      <a href="#start">Getting started</a>
+      <a href="#about">About Palvast</a>
+      <a href="#contact">Contact</a>
+      <a href="/nl/" hreflang="nl" lang="nl">Nederlands</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO (B&M: photo + headline + text + button) -->
+    <section id="hero">
+      <h1>Your pallets move all week. The administration trails behind.</h1>
+      <p>Palvast means you no longer hope the numbers add up. You know they do.</p>
+      <p><a class="button" href="#contact">Free introductory call</a></p>
+      <!-- PROPOSED (decision 2): show launch timing, check legal side first
+      <p>Palvast launches in summer 2027.</p> -->
+      <div class="placeholder">[Image or leave empty: to be decided]</div>
+    </section>
+
+    <!-- 2. SOUND FAMILIAR (B&M: three service blocks) -->
+    <section id="recognise">
+      <h2>Sound familiar?</h2>
+      <ul>
+        <li><strong>Excel sheets.</strong> The administration lives in files that keep getting more complicated.</li>
+        <li><strong>Trusting the pooler's figures.</strong> You can't be sure they are right.</li>
+        <li><strong>The year-end inventory surprise.</strong> Differences only show up afterwards.</li>
+        <li><strong>One person who knows how it all works.</strong> And hopefully isn't on holiday.</li>
+      </ul>
+    </section>
+
+    <!-- 3. THE SHIFT + movement ledger -->
+    <section id="shift">
+      <h2>From hoping it adds up to knowing it does</h2>
+      <p>Palvast tracks what goes out and what comes in, and sets it next to what was declared and invoiced. Mismatches are flagged early.</p>
+
+      <!-- The "movement ledger": sample data, only to show the layout position -->
+      <table class="ledger">
+        <caption>Example: figures that should match</caption>
+        <thead>
+          <tr><th scope="col">Line</th><th scope="col">Quantity</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Outbound</th><td>000</td><td>Matches</td></tr>
+          <tr><th scope="row">Inbound</th><td>000</td><td>Matches</td></tr>
+          <tr><th scope="row">Declared</th><td>000</td><td>Matches</td></tr>
+          <tr><th scope="row">Invoiced</th><td>000</td><td>Matches</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 4. THE RHYTHM (B&M: Track / Optimise / Streamline) -->
+    <section id="rhythm">
+      <h2>The rhythm</h2>
+      <h3>Weekly</h3>
+      <p>We process the movement data and make the declarations to the pooler.</p>
+      <h3>Monthly</h3>
+      <p>We check the invoices.</p>
+      <h3>Yearly</h3>
+      <p>We carry out the inventory validation on your behalf.</p>
+    </section>
+
+    <!-- 5. WHAT YOU GET -->
+    <section id="outcome">
+      <h2>What you get</h2>
+      <p>A monthly report on declared movements and checked invoices. Clients stay because the work works, not because they are locked in.</p>
+    </section>
+
+    <!-- 6. HOW WE START -->
+    <section id="start">
+      <h2>How we start</h2>
+      <ol>
+        <li>A first conversation about where it hurts.</li>
+        <li>We set up data collection and review your internal way of working.</li>
+        <li>Then the ongoing service.</li>
+      </ol>
+      <p><a class="button" href="#contact">Free introductory call</a></p>
+    </section>
+
+    <!-- 7. ABOUT PALVAST (B&M: team block with photo) -->
+    <section id="about">
+      <h2>About Palvast</h2>
+      <p>Palvast combines data science and AI with deep pooling expertise.</p>
+      <div class="placeholder">[Name and short intro: to be confirmed (decision 5). No photo.]</div>
+    </section>
+
+    <!-- B&M also has here: volume stats, client logos and testimonials.
+         Left out on purpose: no customer counts or client names (see handoff). -->
+
+    <!-- 8. CONTACT (B&M: form + email + phone) -->
+    <section id="contact">
+      <h2>Get in touch</h2>
+      <p>Tell us in a conversation where it hurts.</p>
+      <div class="placeholder">[Contact method: to be decided (decision 1). Mailbox does not exist yet.]</div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Palvast</p>
+    <!-- Later: KvK number, contact details, privacy statement (decision 8) -->
+    <p><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a></p>
+  </footer>
+</body>
+</html>
