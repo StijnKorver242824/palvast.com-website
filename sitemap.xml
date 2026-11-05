@@ -17,6 +17,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
   </url>
   <url>
+    <loc>https://palvast.com/nl/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/contact/"/>
+  </url>
+  <url>
     <loc>https://palvast.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/"/>
@@ -30,5 +35,10 @@
     <loc>https://palvast.com/en/services/</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/services/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
+  </url>
+  <url>
+    <loc>https://palvast.com/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/contact/"/>
   </url>
 </urlset>
