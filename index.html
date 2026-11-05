@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palvast | Pallet Pooling Management</title>
+  <meta name="description" content="Palvast | Pallet Pooling Management. Kies je taal / Choose your language.">
+  <link rel="canonical" href="https://palvast.com/">
+
+  <link rel="alternate" hreflang="nl" href="https://palvast.com/nl/">
+  <link rel="alternate" hreflang="en" href="https://palvast.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://palvast.com/">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <!-- Zonder JavaScript blijft de keuzepagina gewoon staan -->
+  <script>
+    // Alleen doorsturen bij eerste bezoek en als de browser Engels is; anders NL
+    var lang = (navigator.language || "nl").toLowerCase();
+    var target = lang.indexOf("nl") === 0 ? "/nl/" : "/en/";
+    window.location.replace(target);
+  </script>
+</head>
+<body>
+  <main>
+    <h1>Palvast</h1>
+    <p><a href="/nl/" hreflang="nl" lang="nl">Nederlands</a> · <a href="/en/" hreflang="en" lang="en">English</a></p>
+  </main>
+</body>
+</html>
