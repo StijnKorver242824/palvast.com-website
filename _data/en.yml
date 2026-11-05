@@ -27,9 +27,9 @@ company_labels:
   vat: "VAT number"
   privacy: "Privacy Statement"
 consent:
-  title: "Cookies and privacy"
+  title: "Cookies and Privacy"
   text: "This website currently uses no cookies or tracking. If we later add optional parts, such as analytics, we will ask for your choice here first."
   accept: "Accept"
-  reject: "Reject optional"
-  more: "Read more"
+  reject: "Reject"
+  more: "Read More"
   settings: "Privacy choices"

@@ -27,9 +27,9 @@ company_labels:
   vat: "Btw-nummer"
   privacy: "Privacyverklaring"
 consent:
-  title: "Cookies en privacy"
+  title: "Cookies en Privacy"
   text: "Deze website gebruikt op dit moment geen cookies of tracking. Voegen we later optionele onderdelen toe, zoals statistieken, dan vragen we hier eerst om je keuze."
   accept: "Accepteren"
-  reject: "Optionele weigeren"
-  more: "Lees meer"
+  reject: "Weigeren"
+  more: "Lees Meer"
   settings: "Privacykeuze"
