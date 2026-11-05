@@ -15,10 +15,8 @@
 
   <!-- Zonder JavaScript blijft de keuzepagina gewoon staan -->
   <script>
-    // Alleen doorsturen bij eerste bezoek en als de browser Engels is; anders NL
-    var lang = (navigator.language || "nl").toLowerCase();
-    var target = lang.indexOf("nl") === 0 ? "/nl/" : "/en/";
-    window.location.replace(target);
+    // Standaard altijd naar de Nederlandse versie; Engels via de taalknop
+    window.location.replace("/nl/");
   </script>
 </head>
 <body>
