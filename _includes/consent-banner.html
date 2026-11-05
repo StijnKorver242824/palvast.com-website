@@ -1,0 +1,10 @@
+{%- assign t = site.data[page.lang] -%}
+<div id="consent-banner" class="consent" role="region" aria-labelledby="consent-title" tabindex="-1" hidden>
+    <p id="consent-title"><strong>{{ t.consent.title }}</strong></p>
+    <p>{{ t.consent.text }}</p>
+    <div class="consent-actions">
+      <button type="button" data-consent-choice="accepted">{{ t.consent.accept }}</button>
+      <button type="button" data-consent-choice="rejected">{{ t.consent.reject }}</button>
+      <a class="consent-more" href="/{{ page.lang }}/privacy/">{{ t.consent.more }}</a>
+    </div>
+  </div>

@@ -3,6 +3,9 @@ title: Palvast
 url: "https://palvast.com"
 baseurl: ""
 
+# Show the small consent notice (bottom-left). Set to false to remove it everywhere.
+consent_banner: true
+
 # Files that live in the repo but are not part of the site
 exclude:
   - README.md

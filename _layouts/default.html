@@ -59,5 +59,10 @@
   </main>
 
   {% include footer.html %}
+
+  {% if site.consent_banner %}
+  {% include consent-banner.html %}
+  <script src="/consent.js" defer></script>
+  {% endif %}
 </body>
 </html>

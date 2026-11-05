@@ -15,5 +15,8 @@
       {%- endif %}
     </p>
     <p><a href="/{{ page.lang }}/privacy/">{{ t.company_labels.privacy }}</a></p>
+    {%- if site.consent_banner %}
+    <p hidden data-consent-settings><button type="button" class="linklike" data-consent-open>{{ t.consent.settings }}</button></p>
+    {%- endif %}
     <p><a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a></p>
   </footer>

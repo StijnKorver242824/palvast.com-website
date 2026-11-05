@@ -1,6 +1,6 @@
 # palvast.com website
 
-Static site built by Jekyll on GitHub Pages. No JavaScript on the content pages.
+Static site built by Jekyll on GitHub Pages. The only script is `consent.js` (the consent notice); the content works without it.
 
 ## Where things live
 
@@ -18,6 +18,10 @@ Static site built by Jekyll on GitHub Pages. No JavaScript on the content pages.
 
 Each page file starts with a small front matter block (title and description). The language
 (`nl` or `en`) and the layout come from the folder, set in `_config.yml`.
+
+## Consent notice
+
+Small notice at the bottom-left with Accept / Reject optional / Read more. Switch it off with `consent_banner: false` in `_config.yml`. The choice is stored in localStorage. Optional services go in as `<script type="text/plain" data-consent="optional" src="..."></script>` and only run after Accept. Texts: `consent:` in `_data/nl.yml` and `_data/en.yml`.
 
 ## Internal notes
 
