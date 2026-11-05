@@ -1,7 +1,19 @@
 {%- assign t = site.data[page.lang] -%}
+{%- assign c = site.data.company -%}
 {%- if page.lang == 'nl' -%}{%- assign other_url = page.url | replace_first: '/nl/', '/en/' -%}{%- else -%}{%- assign other_url = page.url | replace_first: '/en/', '/nl/' -%}{%- endif -%}
 <footer>
-    <p>Palvast</p>
-    {% comment %} {{ t.footer_note }} {% endcomment %}
+    <p><strong>{{ c.legal_name }}</strong></p>
+    <p>
+      {{ t.company_labels.kvk }}: {{ c.kvk }}<br>
+      {{ t.company_labels.address }}: {{ c.address }}<br>
+      {{ t.company_labels.email }}: {{ c.email }}
+      {%- if c.phone != "" %}<br>
+      {{ t.company_labels.phone }}: {{ c.phone }}
+      {%- endif %}
+      {%- if c.vat != "" %}<br>
+      {{ t.company_labels.vat }}: {{ c.vat }}
+      {%- endif %}
+    </p>
+    <p><a href="/{{ page.lang }}/privacy/">{{ t.company_labels.privacy }}</a></p>
     <p><a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a></p>
   </footer>

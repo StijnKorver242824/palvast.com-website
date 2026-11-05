@@ -19,3 +19,10 @@ contact_cta:
   heading: "Get in touch"
   text: "Tell us in a conversation where it hurts."
 footer_note: "Later: KvK number, contact details, privacy statement (decision 8)"
+company_labels:
+  kvk: "Chamber of Commerce (KvK) number"
+  address: "Address"
+  email: "Email"
+  phone: "Phone"
+  vat: "VAT number"
+  privacy: "Privacy Statement"

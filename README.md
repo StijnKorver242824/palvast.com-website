@@ -10,6 +10,7 @@ Static site built by Jekyll on GitHub Pages. No JavaScript on the content pages.
 | Footer | `_includes/footer.html` |
 | `<head>`: meta tags, hreflang, Open Graph, JSON-LD, page frame | `_layouts/default.html` |
 | "Get in touch" block at the bottom of Home, About and Services | `_includes/contact-cta.html` |
+| Company details (KvK number, address, email, VAT), shown in footer and privacy statement | `_data/company.yml` |
 | Menu labels, button text, footer note (Dutch / English) | `_data/nl.yml`, `_data/en.yml` |
 | Page content | `nl/.../index.html`, `en/.../index.html` |
 | Styling | `style.css` |
