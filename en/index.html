@@ -20,14 +20,14 @@
   <meta property="og:url" content="https://palvast.com/en/">
   <meta property="og:image" content="https://palvast.com/og-image.png">
 
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Palvast | Pallet Pooling Management">
   <meta name="twitter:description" content="Palvast handles your pooled pallet administration: declarations, invoice checks and inventory validation, backed by its own platform and expertise.">
   <meta name="twitter:image" content="https://palvast.com/og-image.png">
 
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,14 +42,12 @@
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <!-- WIREFRAME: header (B&M: logo, nav, Contact button) -->
   <header>
     <p class="wordmark"><a href="/en/">Palvast</a></p>
     <nav aria-label="Main menu">
-      <a href="#recognise">Sound familiar?</a>
-      <a href="#rhythm">How it works</a>
-      <a href="#start">Getting started</a>
-      <a href="#about">About Palvast</a>
+      <a href="/en/" aria-current="page">Home</a>
+      <a href="/en/about/">About</a>
+      <a href="/en/services/">Services</a>
       <a href="#contact">Contact</a>
       <a href="/nl/" hreflang="nl" lang="nl">Nederlands</a>
     </nav>
@@ -82,8 +80,7 @@
     <section id="shift">
       <h2>From hoping it adds up to knowing it does</h2>
       <p>Palvast tracks what goes out and what comes in, and sets it next to what was declared and invoiced. Mismatches are flagged early.</p>
-
-      <!-- The "movement ledger": sample data, only to show the layout position -->
+      <!-- Sample data, only to show the layout position -->
       <table class="ledger">
         <caption>Example: figures that should match</caption>
         <thead>
@@ -98,48 +95,32 @@
       </table>
     </section>
 
-    <!-- 4. THE RHYTHM (B&M: Track / Optimise / Streamline) -->
-    <section id="rhythm">
-      <h2>The rhythm</h2>
-      <h3>Weekly</h3>
-      <p>We process the movement data and make the declarations to the pooler.</p>
-      <h3>Monthly</h3>
-      <p>We check the invoices.</p>
-      <h3>Yearly</h3>
-      <p>We carry out the inventory validation on your behalf.</p>
+    <!-- 4. SERVICES TEASER (B&M: "Our leading process" linking to Services) -->
+    <section id="services-teaser">
+      <h2>What we do for you</h2>
+      <ul>
+        <li><strong>Weekly:</strong> process movement data and make declarations.</li>
+        <li><strong>Monthly:</strong> check invoices.</li>
+        <li><strong>Yearly:</strong> carry out inventory validation.</li>
+      </ul>
+      <p><a href="/en/services/">See all services</a></p>
     </section>
 
-    <!-- 5. WHAT YOU GET -->
-    <section id="outcome">
-      <h2>What you get</h2>
-      <p>A monthly report on declared movements and checked invoices. Clients stay because the work works, not because they are locked in.</p>
-    </section>
-
-    <!-- 6. HOW WE START -->
-    <section id="start">
-      <h2>How we start</h2>
-      <ol>
-        <li>A first conversation about where it hurts.</li>
-        <li>We set up data collection and review your internal way of working.</li>
-        <li>Then the ongoing service.</li>
-      </ol>
-      <p><a class="button" href="#contact">Free introductory call</a></p>
-    </section>
-
-    <!-- 7. ABOUT PALVAST (B&M: team block with photo) -->
-    <section id="about">
+    <!-- 5. ABOUT TEASER (B&M: "A dedicated team" linking to About) -->
+    <section id="about-teaser">
       <h2>About Palvast</h2>
       <p>Palvast combines data science and AI with deep pooling expertise.</p>
-      <div class="placeholder">[Name and short intro: to be confirmed (decision 5). No photo.]</div>
+      <p><a href="/en/about/">More about us</a></p>
     </section>
 
     <!-- B&M also has here: volume stats, client logos and testimonials.
          Left out on purpose: no customer counts or client names (see handoff). -->
 
-    <!-- 8. CONTACT (B&M: form + email + phone) -->
+    <!-- CONTACT (B&M: formulier + e-mail + telefoon). Zelfde blok op elke pagina -->
     <section id="contact">
       <h2>Get in touch</h2>
       <p>Tell us in a conversation where it hurts.</p>
+      <p><strong>Free introductory call</strong></p>
       <div class="placeholder">[Contact method: to be decided (decision 1). Mailbox does not exist yet.]</div>
     </section>
 

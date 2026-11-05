@@ -7,8 +7,28 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/"/>
   </url>
   <url>
+    <loc>https://palvast.com/nl/about/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/about/"/>
+  </url>
+  <url>
+    <loc>https://palvast.com/nl/services/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
+  </url>
+  <url>
     <loc>https://palvast.com/en/</loc>
     <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/"/>
+  </url>
+  <url>
+    <loc>https://palvast.com/en/about/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/about/"/>
+  </url>
+  <url>
+    <loc>https://palvast.com/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/services/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
   </url>
 </urlset>
