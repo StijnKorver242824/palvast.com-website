@@ -2,7 +2,7 @@
 {%- assign nl_url = page.url | replace_first: '/en/', '/nl/' -%}
 {%- assign en_url = page.url | replace_first: '/nl/', '/en/' -%}
 {%- if page.lang == 'nl' -%}{%- assign other_url = en_url -%}{%- else -%}{%- assign other_url = nl_url -%}{%- endif -%}
-{%- if page.url == '/nl/' or page.url == '/en/' -%}{%- assign x_default = site.url | append: '/' -%}{%- else -%}{%- assign x_default = en_url | prepend: site.url -%}{%- endif -%}
+{%- if page.url == '/nl/' or page.url == '/en/' -%}{%- assign x_default = site.url | append: '/' -%}{%- else -%}{%- assign x_default = nl_url | prepend: site.url -%}{%- endif -%}
 {%- assign canonical = page.url | prepend: site.url -%}
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">

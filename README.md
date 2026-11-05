@@ -18,6 +18,11 @@ Static site built by Jekyll on GitHub Pages. No JavaScript on the content pages.
 Each page file starts with a small front matter block (title and description). The language
 (`nl` or `en`) and the layout come from the folder, set in `_config.yml`.
 
+## Internal notes
+
+Notes in the source (B&M mapping, open decisions, the commented-out launch line) are written as
+`{% comment %} ... {% endcomment %}`. Unlike `<!-- -->` they do not appear in the published HTML.
+
 ## Add a page
 
 1. Create `nl/<name>/index.html` and `en/<name>/index.html` with front matter and content.

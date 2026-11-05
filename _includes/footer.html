@@ -2,6 +2,6 @@
 {%- if page.lang == 'nl' -%}{%- assign other_url = page.url | replace_first: '/nl/', '/en/' -%}{%- else -%}{%- assign other_url = page.url | replace_first: '/en/', '/nl/' -%}{%- endif -%}
 <footer>
     <p>Palvast</p>
-    <!-- {{ t.footer_note }} -->
+    {% comment %} {{ t.footer_note }} {% endcomment %}
     <p><a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a></p>
   </footer>
