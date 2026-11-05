@@ -1,44 +1,20 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{%- assign langs = "nl,en" | split: "," %}
+{%- for lang in langs %}
+{%- assign lang_pages = site.pages | where: "lang", lang | sort: "url" %}
+{%- for p in lang_pages %}
+{%- assign nl_url = p.url | replace_first: '/en/', '/nl/' %}
+{%- assign en_url = p.url | replace_first: '/nl/', '/en/' %}
   <url>
-    <loc>https://palvast.com/nl/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/"/>
+    <loc>{{ p.url | prepend: site.url }}</loc>
+    <xhtml:link rel="alternate" hreflang="nl" href="{{ nl_url | prepend: site.url }}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="{{ en_url | prepend: site.url }}"/>
   </url>
-  <url>
-    <loc>https://palvast.com/nl/about/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/about/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/about/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/nl/services/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/services/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/nl/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/contact/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/contact/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/en/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/en/about/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/about/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/about/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/en/services/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/services/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/services/"/>
-  </url>
-  <url>
-    <loc>https://palvast.com/en/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="nl" href="https://palvast.com/nl/contact/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://palvast.com/en/contact/"/>
-  </url>
+{%- endfor %}
+{%- endfor %}
 </urlset>

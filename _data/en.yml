@@ -1,0 +1,21 @@
+# English strings used by the shared layout and includes
+locale: en_GB
+skip: "Skip to content"
+menu_label: "Main menu"
+nav:
+  - path: ""
+    label: "Home"
+  - path: "about/"
+    label: "About"
+  - path: "services/"
+    label: "Services"
+  - path: "contact/"
+    label: "Contact"
+other_lang: nl
+other_lang_name: "Nederlands"
+other_locale: nl_NL
+cta: "Free introductory call"
+contact_cta:
+  heading: "Get in touch"
+  text: "Tell us in a conversation where it hurts."
+footer_note: "Later: KvK number, contact details, privacy statement (decision 8)"

@@ -1,0 +1,63 @@
+{%- assign t = site.data[page.lang] -%}
+{%- assign nl_url = page.url | replace_first: '/en/', '/nl/' -%}
+{%- assign en_url = page.url | replace_first: '/nl/', '/en/' -%}
+{%- if page.lang == 'nl' -%}{%- assign other_url = en_url -%}{%- else -%}{%- assign other_url = nl_url -%}{%- endif -%}
+{%- if page.url == '/nl/' or page.url == '/en/' -%}{%- assign x_default = site.url | append: '/' -%}{%- else -%}{%- assign x_default = en_url | prepend: site.url -%}{%- endif -%}
+{%- assign canonical = page.url | prepend: site.url -%}
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description }}">
+  <link rel="canonical" href="{{ canonical }}">
+
+  <link rel="alternate" hreflang="nl" href="{{ nl_url | prepend: site.url }}">
+  <link rel="alternate" hreflang="en" href="{{ en_url | prepend: site.url }}">
+  <link rel="alternate" hreflang="x-default" href="{{ x_default }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Palvast">
+  <meta property="og:locale" content="{{ t.locale }}">
+  <meta property="og:locale:alternate" content="{{ t.other_locale }}">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ site.url }}/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:description" content="{{ page.description }}">
+  <meta name="twitter:image" content="{{ site.url }}/og-image.png">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Palvast",
+    "url": "{{ site.url }}/{{ page.lang }}/",
+    "logo": "{{ site.url }}/favicon.svg",
+    "inLanguage": "{{ page.lang }}"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ t.skip }}</a>
+
+  {% include header.html %}
+
+  <main id="main">
+
+{{ content }}
+{% if page.contact_cta %}
+    {% include contact-cta.html %}
+{% endif %}
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

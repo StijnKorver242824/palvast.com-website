@@ -1,0 +1,21 @@
+# Dutch strings used by the shared layout and includes
+locale: nl_NL
+skip: "Ga naar de inhoud"
+menu_label: "Hoofdmenu"
+nav:
+  - path: ""
+    label: "Home"
+  - path: "about/"
+    label: "Over ons"
+  - path: "services/"
+    label: "Diensten"
+  - path: "contact/"
+    label: "Contact"
+other_lang: en
+other_lang_name: "English"
+other_locale: en_GB
+cta: "Gratis verkennend gesprek"
+contact_cta:
+  heading: "Neem contact op"
+  text: "Vertel in een gesprek waar het bij jullie knelt."
+footer_note: "Later: KvK-nummer, contactgegevens, privacyverklaring (besluit 8)"

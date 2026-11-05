@@ -1,0 +1,12 @@
+{%- assign t = site.data[page.lang] -%}
+{%- if page.lang == 'nl' -%}{%- assign other_url = page.url | replace_first: '/nl/', '/en/' -%}{%- else -%}{%- assign other_url = page.url | replace_first: '/en/', '/nl/' -%}{%- endif -%}
+<header>
+    <p class="wordmark"><a href="/{{ page.lang }}/">Palvast</a></p>
+    <nav aria-label="{{ t.menu_label }}">
+      {%- for item in t.nav %}
+      {%- capture link %}/{{ page.lang }}/{{ item.path }}{% endcapture %}
+      <a href="{{ link }}"{% if page.url == link %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+      <a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a>
+    </nav>
+  </header>

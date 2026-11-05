@@ -1,0 +1,26 @@
+# Palvast website (GitHub Pages, Jekyll)
+title: Palvast
+url: "https://palvast.com"
+baseurl: ""
+
+# Files that live in the repo but are not part of the site
+exclude:
+  - README.md
+  - handoff.md
+  - Gemfile
+  - Gemfile.lock
+
+# Every page under /nl/ and /en/ gets the shared layout and its language
+defaults:
+  - scope:
+      path: "nl"
+    values:
+      layout: default
+      lang: nl
+      contact_cta: true
+  - scope:
+      path: "en"
+    values:
+      layout: default
+      lang: en
+      contact_cta: true
