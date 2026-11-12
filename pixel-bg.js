@@ -8,9 +8,18 @@
   if (!hosts.length) { return; }
 
   function setup(host) {
+    // Safety: the stylesheet defines --cell on these blocks. If it is missing (not loaded, or an old
+    // cached copy), do nothing: the canvas would otherwise sit in the page flow and grow the page endlessly.
+    if (!getComputedStyle(host).getPropertyValue("--cell").trim()) { return; }
+
     var canvas = document.createElement("canvas");
     canvas.className = "pixel-canvas";
     canvas.setAttribute("aria-hidden", "true");
+    // Taken out of the flow here as well, so it can never change the size of its own block
+    canvas.style.position = "absolute";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.pointerEvents = "none";
     host.insertBefore(canvas, host.firstChild);
     var ctx = canvas.getContext("2d");
     if (!ctx) { canvas.remove(); return; }
@@ -35,12 +44,16 @@
       ctx.restore();
     }
 
+    var lastW = 0, lastH = 0;
+
     function draw() {
       // A whole number of columns and rows; cells stretch slightly so they divide the block exactly
       var target = cellSize();
       var w = host.clientWidth;
       var h = host.clientHeight;
       if (!w || !h) { return; }
+      if (w === lastW && h === lastH) { return; }   // nothing changed: do not repaint
+      lastW = w; lastH = h;
       var cols = Math.max(1, Math.round(w / target));
       var rows = Math.max(1, Math.round(h / target));
       host.style.setProperty("--cell-x", (w / cols) + "px");
