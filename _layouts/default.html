@@ -32,6 +32,8 @@
   <meta name="twitter:image" content="{{ site.url }}/og-image.png">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0e1a12">
+  <link rel="preload" href="/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 
   <script type="application/ld+json">
@@ -50,7 +52,7 @@
 
   {% include header.html %}
 
-  <main id="main">
+  <main id="main"{% if page.main_class %} class="{{ page.main_class }}"{% endif %}>
 
 {{ content }}
 {% if page.contact_cta %}
@@ -59,6 +61,8 @@
   </main>
 
   {% include footer.html %}
+
+  <script src="/pixel-bg.js" defer></script>
 
   {% if site.consent_banner %}
   {% include consent-banner.html %}

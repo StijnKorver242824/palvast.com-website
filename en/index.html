@@ -2,17 +2,56 @@
 title: "Palvast | Pallet Pooling Management"
 description: "Palvast handles your pooled pallet administration: declarations, invoice checks and inventory validation, backed by its own platform and expertise."
 ---
-    {% comment %} 1. HERO (B&M: photo + headline + text + button) {% endcomment %}
-    <section id="hero">
-      <h1>Your pallets move all week. The administration trails behind.</h1>
-      <p>Palvast means you no longer hope the numbers add up. You know they do.</p>
-      <p><a class="button" href="/en/contact/">{{ site.data.en.cta }}</a></p>
-      {% comment %} PROPOSED (decision 2): show launch timing, check legal side first
-      <p>Palvast launches in summer 2027.</p> {% endcomment %}
-      <div class="placeholder">[Image or leave empty: to be decided]</div>
+{% comment %}
+      Home: hero with example cards and a scrolling strip (styling from the design example),
+      then the content sections. The cards hold example figures only, labelled as an example.
+      Hero cards reuse text from the sections below. Not allowed here: customer names or counts,
+      percentages, savings claims (see handoff).
+      PROPOSED (decision 2): launch timing line, check the legal side first.
+    {% endcomment %}
+    <section id="hero" class="hero pixel-bg on-dark">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <p class="tagline">Pooled pallet administration</p>
+          <h1>Your pallets move all week. The administration trails behind.</h1>
+          <p class="lede">Palvast means you no longer hope the numbers add up. You know they do.</p>
+          <div class="cta-row">
+            <a class="button" href="/en/contact/">{{ site.data.en.cta }}</a>
+            <a class="btn-text" href="/en/services/">See the services</a>
+          </div>
+        </div>
+
+        <div class="hero-cards" role="group" aria-label="Example overview">
+          <article class="card card-ledger">
+            <table class="mini-ledger">
+              <caption>Example: the figures side by side</caption>
+              <tbody>
+          <tr><th scope="row">Outbound</th><td>1,240</td><td><span class="chip chip-ok"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="currentColor"/></svg> Matches</span></td></tr>
+          <tr><th scope="row">Inbound</th><td>1,240</td><td><span class="chip chip-ok"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="currentColor"/></svg> Matches</span></td></tr>
+          <tr><th scope="row">Declared</th><td>1,240</td><td><span class="chip chip-ok"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z" fill="currentColor"/></svg> Matches</span></td></tr>
+          <tr><th scope="row">Invoiced</th><td>1,236</td><td><span class="chip chip-warn"><svg viewBox="0 0 24 24" width="12" height="12" aria-hidden="true"><path d="M12 3l10 18H2z" fill="currentColor"/></svg> Mismatch</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="card card-rhythm">
+            <p class="card-title">The rhythm</p>
+            <ul class="rhythm">
+        <li><span class="when">Weekly</span> Declarations and movement data</li>
+        <li><span class="when">Monthly</span> Checking invoices</li>
+        <li><span class="when">Yearly</span> Inventory validation</li>
+            </ul>
+          </article>
+
+          <article class="card card-report">
+            <p class="card-title">Monthly report</p>
+            <p>Declared movements and checked invoices, every month at a glance.</p>
+          </article>
+        </div>
+      </div>
+      {% include carousel.html %}
     </section>
 
-    {% comment %} 2. SOUND FAMILIAR (B&M: three service blocks) {% endcomment %}
     <section id="recognise">
       <h2>Sound familiar?</h2>
       <ul>
@@ -23,26 +62,11 @@ description: "Palvast handles your pooled pallet administration: declarations, i
       </ul>
     </section>
 
-    {% comment %} 3. THE SHIFT + movement ledger {% endcomment %}
     <section id="shift">
       <h2>From hoping it adds up to knowing it does</h2>
       <p>Palvast tracks what goes out and what comes in, and sets it next to what was declared and invoiced. Mismatches are flagged early.</p>
-      {% comment %} Sample data, only to show the layout position {% endcomment %}
-      <table class="ledger">
-        <caption>Example: figures that should match</caption>
-        <thead>
-          <tr><th scope="col">Line</th><th scope="col">Quantity</th><th scope="col">Status</th></tr>
-        </thead>
-        <tbody>
-          <tr><th scope="row">Outbound</th><td>000</td><td>Matches</td></tr>
-          <tr><th scope="row">Inbound</th><td>000</td><td>Matches</td></tr>
-          <tr><th scope="row">Declared</th><td>000</td><td>Matches</td></tr>
-          <tr><th scope="row">Invoiced</th><td>000</td><td>Matches</td></tr>
-        </tbody>
-      </table>
     </section>
 
-    {% comment %} 4. SERVICES TEASER (B&M: "Our leading process" linking to Services) {% endcomment %}
     <section id="services-teaser">
       <h2>What we do for you</h2>
       <ul>
@@ -53,12 +77,8 @@ description: "Palvast handles your pooled pallet administration: declarations, i
       <p><a href="/en/services/">See all services</a></p>
     </section>
 
-    {% comment %} 5. ABOUT TEASER (B&M: "A dedicated team" linking to About) {% endcomment %}
     <section id="about-teaser">
       <h2>About Palvast</h2>
       <p>Palvast combines data science and AI with deep pooling expertise.</p>
       <p><a href="/en/about/">More about us</a></p>
     </section>
-
-    {% comment %} B&M also has here: volume stats, client logos and testimonials.
-         Left out on purpose: no customer counts or client names (see handoff). {% endcomment %}

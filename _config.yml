@@ -6,6 +6,11 @@ baseurl: ""
 # Show the small consent notice (bottom-left). Set to false to remove it everywhere.
 consent_banner: true
 
+# Raise this number whenever you add, remove or change an optional service (for example analytics).
+# Everyone is then asked again, and nothing optional runs until they choose.
+# Also update the consent text in _data/nl.yml and _data/en.yml, and the privacy statement.
+consent_version: 1
+
 # Files that live in the repo but are not part of the site
 exclude:
   - README.md

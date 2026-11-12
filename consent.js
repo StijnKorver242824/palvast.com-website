@@ -4,23 +4,29 @@
  * To add an optional service later, add it to the page as:
  *   <script type="text/plain" data-consent="optional" src="..."></script>
  * It stays inactive until the visitor accepts. After "Reject optional" it never loads.
+ *
+ * A stored choice only counts for the version it was made under (consent_version in _config.yml).
+ * Raise the version when optional services change: everyone is asked again, and nothing optional
+ * runs until they choose. A "yes" given before a service existed is never reused for it.
  */
 (function () {
   "use strict";
   var KEY = "palvast-consent";
   var banner = document.getElementById("consent-banner");
   if (!banner) { return; }
+  var VERSION = banner.getAttribute("data-consent-version") || "1";
 
   function read() {
     try {
       var v = JSON.parse(localStorage.getItem(KEY));
-      return v && (v.optional === "accepted" || v.optional === "rejected") ? v.optional : null;
+      // A choice made under another version is ignored, so the visitor is asked again
+      return v && String(v.v) === VERSION && (v.optional === "accepted" || v.optional === "rejected") ? v.optional : null;
     } catch (e) { return null; }
   }
 
   function write(choice) {
     try {
-      localStorage.setItem(KEY, JSON.stringify({ v: 1, optional: choice, date: new Date().toISOString() }));
+      localStorage.setItem(KEY, JSON.stringify({ v: VERSION, optional: choice, date: new Date().toISOString() }));
     } catch (e) { /* storage unavailable: the notice simply shows again next time */ }
   }
 

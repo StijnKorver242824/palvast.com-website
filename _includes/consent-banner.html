@@ -1,5 +1,5 @@
 {%- assign t = site.data[page.lang] -%}
-<div id="consent-banner" class="consent" role="region" aria-labelledby="consent-title" tabindex="-1" hidden>
+<div id="consent-banner" class="consent" data-consent-version="{{ site.consent_version | default: 1 }}" role="region" aria-labelledby="consent-title" tabindex="-1" hidden>
     <p id="consent-title"><strong>{{ t.consent.title }}</strong></p>
     <p>{{ t.consent.text }}</p>
     <div class="consent-actions">

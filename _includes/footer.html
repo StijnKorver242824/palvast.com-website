@@ -1,22 +1,28 @@
 {%- assign t = site.data[page.lang] -%}
 {%- assign c = site.data.company -%}
 {%- if page.lang == 'nl' -%}{%- assign other_url = page.url | replace_first: '/nl/', '/en/' -%}{%- else -%}{%- assign other_url = page.url | replace_first: '/en/', '/nl/' -%}{%- endif -%}
-<footer>
-    <p><strong>{{ c.legal_name }}</strong></p>
-    <p>
-      {{ t.company_labels.kvk }}: {{ c.kvk }}<br>
-      {{ t.company_labels.address }}: {{ c.address }}<br>
-      {{ t.company_labels.email }}: {{ c.email }}
-      {%- if c.phone != "" %}<br>
-      {{ t.company_labels.phone }}: {{ c.phone }}
-      {%- endif %}
-      {%- if c.vat != "" %}<br>
-      {{ t.company_labels.vat }}: {{ c.vat }}
-      {%- endif %}
-    </p>
-    <p><a href="/{{ page.lang }}/privacy/">{{ t.company_labels.privacy }}</a></p>
-    {%- if site.consent_banner %}
-    <p hidden data-consent-settings><button type="button" class="linklike" data-consent-open>{{ t.consent.settings }}</button></p>
-    {%- endif %}
-    <p><a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a></p>
+<footer class="site-footer on-dark">
+    <div class="footer-inner">
+      <div class="footer-company">
+        <p class="footer-name">{{ c.legal_name }}</p>
+        <p>
+          {{ t.company_labels.kvk }}: {{ c.kvk }}<br>
+          {{ t.company_labels.address }}: {{ c.address }}<br>
+          {{ t.company_labels.email }}: {{ c.email }}
+          {%- if c.phone != "" %}<br>
+          {{ t.company_labels.phone }}: {{ c.phone }}
+          {%- endif %}
+          {%- if c.vat != "" %}<br>
+          {{ t.company_labels.vat }}: {{ c.vat }}
+          {%- endif %}
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="/{{ page.lang }}/privacy/">{{ t.company_labels.privacy }}</a>
+        {%- if site.consent_banner %}
+        <span hidden data-consent-settings><button type="button" class="linklike" data-consent-open>{{ t.consent.settings }}</button></span>
+        {%- endif %}
+        <a href="{{ other_url }}" hreflang="{{ t.other_lang }}" lang="{{ t.other_lang }}">{{ t.other_lang_name }}</a>
+      </div>
+    </div>
   </footer>

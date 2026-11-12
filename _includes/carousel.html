@@ -1,0 +1,21 @@
+{%- assign t = site.data[page.lang] -%}
+{% comment %}
+      Scrolling strip at the bottom of the hero. It holds the items from _data/<lang>.yml (carousel.items).
+      Customer logos could go here later, but only real customers who have agreed to it:
+      <li><img src="/logos/name.svg" alt="Name"></li>
+      The second group repeats the first (hidden from screen readers) so the loop is seamless.
+    {% endcomment %}
+    <div class="trusted">
+      <p>{{ t.carousel.label }}</p>
+      <div class="logo-carousel">
+        <div class="logo-track">
+          {%- for round in (1..2) %}
+          <ul class="logo-group"{% if round == 2 %} aria-hidden="true"{% endif %}>
+            {%- for item in t.carousel.items %}
+            <li>{{ item }}</li>
+            {%- endfor %}
+          </ul>
+          {%- endfor %}
+        </div>
+      </div>
+    </div>

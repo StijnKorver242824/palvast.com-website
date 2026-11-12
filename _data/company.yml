@@ -1,8 +1,8 @@
 # Company details shown in the footer and the privacy statement.
 # Replace the placeholders. Leave a value empty ("") to hide that line (e.g. vat).
-legal_name: "Palvast"
-kvk: "12345678"
-address: "Straatnaam 99, 1234 AB Stad"
-email: "hi@palvast.com"
-phone: "+31 6 12345678"
-vat: "NL123456789B12"
+legal_name: "[REGISTERED NAME]"
+kvk: "[KVK NUMBER]"
+address: "[ADDRESS OF REGISTERED OFFICE]"
+email: "[EMAIL ADDRESS]"
+phone: ""
+vat: "[VAT NUMBER]"
